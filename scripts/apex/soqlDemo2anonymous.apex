@@ -1,0 +1,1 @@
+SoqlDemo2.childtoparent_soql1();
