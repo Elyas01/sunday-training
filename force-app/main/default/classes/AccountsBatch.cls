@@ -1,5 +1,6 @@
 // updating description of all accounts via batch class.
 // getting statistics using stateful
+//again change
 public class AccountsBatch implements Database.Batchable<SObject>, Database.stateful {
 
     Integer count=0;  // Database.stateful is to find out how many times our batch run
