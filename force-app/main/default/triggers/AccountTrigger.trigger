@@ -1,4 +1,15 @@
 trigger AccountTrigger on Account (before insert, before update, after insert, after update) {
+   
+   //Check if switch is ON or OFF.
+   TriggerSwitch__c accountswitch= TriggerSwitch__c.getInstance('account');
+   Boolean accSwitch=accountswitch.switch__c; //Checkbox field
+   if (accSwitch==false) {
+    return;
+   }
+   //if OFF
+      //return
+      //for contact also
+   
     system.debug('---Start---');
     if (trigger.isBefore) {
        AccounTriggerHandler.updateAccountDescription(Trigger.New, Trigger.Old, Trigger.NewMap, Trigger.OldMap);
@@ -8,6 +19,19 @@ trigger AccountTrigger on Account (before insert, before update, after insert, a
     }
     System.debug('---End---');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
   Map<Id,Account> oldAccMap= trigger.oldMap;
