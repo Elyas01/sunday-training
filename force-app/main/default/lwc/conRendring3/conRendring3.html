@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="CONDITIONAL RENDERING3">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+            variant="brand"
+            label="click me"
+            onclick={clickHandler}>
+        </lightning-button>
+       
+        
+        <template if:true={showContent}>
+            <div>
+                I am the so called content. <br/>
+            I get displayed conditionally!
+            </div>
+            
+        </template>
+        </div>
+    </lightning-card>
+</template>

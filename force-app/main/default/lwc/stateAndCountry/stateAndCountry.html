@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="My state and Country">
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox 
+            label="My State"
+            options={States}
+            value={selectedState}
+            onchange={changeHandler}>
+        </lightning-combobox>
+        <lightning-combobox
+        label="My Country"
+        options={Countries}
+        value={selectedCountry}
+        onchange={changeHandler}>
+    </lightning-combobox>
+
+    <div class="slds-var-m-top_x-small">
+        The State &amp; country i live in are {selectedState}, {selectedCountry}
+    </div>
+
+        </div>
+    </lightning-card>
+</template>

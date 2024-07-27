@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Contacts">
+        <div class="slds-var-m-around_medium">
+            <template for:each={contacts} for:item="acc">
+                <div key={acc.id} class="slds-var-m-bottom_x-small">
+                    <strong>{acc.Name}</strong><br/>
+                    {acc.Industry},{acc.Rating}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
