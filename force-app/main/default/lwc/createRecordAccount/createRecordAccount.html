@@ -1,18 +1,28 @@
 <template>
     <lightning-card title="CREATE RECORD" icon-name="standard:account">
-        <div class="slds-var-m-around_medium">
+        <div class="slds-var-m-around_medium"
+        onsuccess={successHandler}>
             <form class="accountform">
                 <lightning-input 
                 label="Account Name" 
                 name="Name" 
                 onchange={changeHandler}>
-            </lightning-input>
+            <!--</lightning-input>
                 <lightning-input 
                 type="text" 
                 label="Industry" 
                 name="Industry" 
                 onchange={changeHandler}>
+                -->
             </lightning-input>
+            
+            <lightning-combobox
+            label="Industry"
+            name="Industry"
+            options={industryOptions}
+            onchange={changeHandler}>
+            </lightning-combobox>
+
                 <lightning-input 
                 type="number" 
                 label="Annual Revenue" 
