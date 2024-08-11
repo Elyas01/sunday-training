@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Upadate Account">
+        <div class="slds-var-m-around_medium">
+            <template if:true={acc.data}>
+                <form class="accform">
+                    <lightning-input
+                        label="Name"
+                        name="name"
+                        value={acc.data.fields.Name.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    <lightning-input
+                        label="AnnualRevenue"
+                        name="AnnualRevenue"
+                        value={acc.data.fields.AnnualRevenue.value}
+                        onchange={changeHandler}>
+                    </lightning-input>
+                    <lightning-combobox
+                        label="Industry"
+                        name="Industry"
+                        value={acc.data.fields.Industry.value}
+                        options={industryOptions}
+                        onchange={changeHandler}>
+                        </lightning-combobox>
+                    <lightning-combobox
+                        label="Type"
+                        name="Type"
+                        value={acc.data.fields.Type.value}
+                        options={typeOptions}
+                        onchange={changeHandler}>
+                        </lightning-combobox>
+                    <div class="slds-var-m-top_x-small  slds-align_absolute-center">
+                        <lightning-button 
+                        variant="brand"  
+                        label="Update" 
+                        onclick={updateAcc}
+                            class="slds-var-m-left_x-small"></lightning-button>
+                    </div>
+                </form>
+            </template>
+        </div>
+    </lightning-card>
+</template>
