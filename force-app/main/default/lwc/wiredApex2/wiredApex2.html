@@ -1,0 +1,13 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Top 5 Opportunities" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            <lightning-datatable
+                key-field="Id"
+                data={opps.data}
+                columns={columns}
+                hide-checkbox-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
